@@ -1,25 +1,65 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import csp from 'vite-plugin-csp';
-
-
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [react(),tailwindcss(),csp({
-    policies: {
-      'default-src': ["'self'"],
-      'script-src': ["'self'", "'unsafe-inline'", "apis.google.com"],
-      'connect-src': ["'self'", "https://api.sanity.io", "https://youtube.googleapis.com"],
-    },
-  }),],
+  // Explicit root configuration
+  root: __dirname,
+  publicDir: 'public',
+  
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+
   build: {
-    sourcemap: false, // Prevents exposing source code
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: './index.html' // Directly reference root-level index.html
+      },
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        entryFileNames: 'assets/[name]-[hash].js'
+      }
+    }
   },
+
   server: {
     port: 5173,
-    allowedHosts: [
-      '0126-2405-201-6004-70db-94e9-8723-780c-2dd8.ngrok-free.app'
-    ]
+    host: true,
+    strictPort: true,
+  },
+
+  // Production base path
+  base: '/',
+
+  // CSS handling
+  css: {
+    devSourcemap: false,
+    modules: {
+      localsConvention: 'camelCase'
+    }
+  },
+
+  // Dependency optimization
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      '@sanity/client',
+      '@sanity/image-url'
+    ],
+    exclude: []
+  },
+
+  // Resolver configuration
+  resolve: {
+    alias: {
+      '@': '/src',
+      '~': '/public'
+    }
   }
-})
+});

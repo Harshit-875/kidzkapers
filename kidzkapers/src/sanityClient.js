@@ -1,17 +1,19 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 
-const projectId = import.meta.env.VITE_SANITY_PROJECT_ID;
+// Add validation for environment variables
+if (!import.meta.env.VITE_SANITY_PROJECT_ID) {
+  throw new Error('Missing Sanity project ID in environment variables')
+}
 
 const client = createClient({
-  projectId: projectId,
-  dataset: 'production',
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+  dataset: import.meta.env.VITE_SANITY_DATASET || 'production',
   useCdn: true,
-  apiVersion: '2023-01-01',
+  apiVersion: '2023-05-03', // Updated to current API version
 })
 
 const builder = imageUrlBuilder(client)
 
 export const urlFor = (source) => builder.image(source)
-
 export default client
