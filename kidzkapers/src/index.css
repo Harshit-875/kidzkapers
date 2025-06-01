@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Add Fredoka custom class */
+.fredoka-400 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  .fredoka-700 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  body {
+    font-family: 'Comic Neue', cursive;
+  }
+  
+  /* Add backdrop blur support */
+@supports (backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
+.backdrop-blur-sm {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
