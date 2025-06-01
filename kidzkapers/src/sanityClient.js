@@ -7,7 +7,8 @@ if (!import.meta.env.VITE_SANITY_PROJECT_ID) {
 }
 
 const client = createClient({
-  projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID ||
+  yid6cm5j,
   dataset: import.meta.env.VITE_SANITY_DATASET || 'production',
   useCdn: true,
   apiVersion: '2023-05-03', // Updated to current API version

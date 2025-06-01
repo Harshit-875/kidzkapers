@@ -18,7 +18,7 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       input: {
-        main: './index.html' // Directly reference root-level index.html
+        main: './public/index.html' // Directly reference root-level index.html
       },
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
