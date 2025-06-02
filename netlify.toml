@@ -3,3 +3,5 @@
   command = "npm install && npm run build"
   publish = "kidzkapers/build"  # Where the built files are
 
+[build.environment]
+  NODE_VERSION = "18"
