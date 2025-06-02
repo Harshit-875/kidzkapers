@@ -3,10 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  // Explicit root configuration
-  root: __dirname,
   publicDir: 'public',
-  
+
   plugins: [
     react(),
     tailwindcss(),
@@ -17,9 +15,6 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false,
     rollupOptions: {
-      input: {
-        main: './public/index.html' // Directly reference root-level index.html
-      },
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
         entryFileNames: 'assets/[name]-[hash].js'
@@ -33,10 +28,8 @@ export default defineConfig({
     strictPort: true,
   },
 
-  // Production base path
-  base: '/',
+  base: './', // <-- crucial for Netlify
 
-  // CSS handling
   css: {
     devSourcemap: false,
     modules: {
@@ -44,7 +37,6 @@ export default defineConfig({
     }
   },
 
-  // Dependency optimization
   optimizeDeps: {
     include: [
       'react',
@@ -55,7 +47,6 @@ export default defineConfig({
     exclude: []
   },
 
-  // Resolver configuration
   resolve: {
     alias: {
       '@': '/src',
