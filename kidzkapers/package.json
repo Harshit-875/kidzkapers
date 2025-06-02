@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rimraf ./.vite ./dist",
+    "prebuild": "npm run clean"
   },
-"engines": {
-  "node": "18.x"
-},
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
     "@sanity/client": "^7.3.0",
@@ -35,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "postcss": "^8.5.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.7",
     "vite": "^6.3.5"
   }
