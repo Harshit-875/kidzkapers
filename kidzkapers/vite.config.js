@@ -28,7 +28,7 @@ export default defineConfig({
     strictPort: true,
   },
 
-  base: './', // <-- crucial for Netlify
+  base: '/', // <-- crucial for Netlify
 
   css: {
     devSourcemap: false,
