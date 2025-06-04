@@ -1,5 +1,3 @@
-
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -16,6 +14,7 @@ function App() {
     <Router>
       {/* Header stays fixed outside Routes */}
       <Header />
+      <h1>hello</h1>
       
       {/* Main content with padding to account for fixed header */}
       <main className=" min-h-screen">

@@ -74,7 +74,7 @@ const About = () => {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section - Updated with new styling */}
-      <section className="pt-12 md:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-12 md:pt-13 px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-sky-300 via-yellow-300 to-red-400 text-center  md:mb-16 h-64 md:h-80 flex flex-col justify-center items-center p-6 md:p-8 rounded-2xl shadow-md">
           <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 fredoka-700 tracking-tight">
             About Kidz Kapers
@@ -94,7 +94,7 @@ const About = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-white">
+      <section className="pt-0 pb-16 bg-white">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
