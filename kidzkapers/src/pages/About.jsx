@@ -9,12 +9,11 @@ import shrihari from "../assets/team/shrihari.jpg";
 import roshani from "../assets/team/roshani.jpg";
 import gourav from "../assets/team/gourav.jpg";
 import rohit from "../assets/team/rohit.jpg";
+
 const scrollWithOffset = (el) => {
   if (!el) return;
 
   const headerOffset = window.innerWidth <= 768 ? 60 : 80;
-
-  // Ensure DOM is ready and handle mobile height correctly
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   const elementTop = el.getBoundingClientRect().top + scrollTop;
   const viewportHeight = window.visualViewport?.height || window.innerHeight;
@@ -73,9 +72,9 @@ const About = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Hero Section - Updated with new styling */}
-      <section className="pt-12 md:pt-13 px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-sky-300 via-yellow-300 to-red-400 text-center  md:mb-16 h-64 md:h-80 flex flex-col justify-center items-center p-6 md:p-8 rounded-2xl shadow-md">
+      {/* Hero Section */}
+      <section className="pt-8 md:pt-10 px-4 sm:px-6 lg:px-8 mb-12 md:mb-16">
+        <div className="bg-gradient-to-br from-sky-300 via-yellow-300 to-red-400 text-center h-64 md:h-80 flex flex-col justify-center items-center p-6 md:p-8 rounded-2xl shadow-md mx-auto max-w-7xl">
           <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 fredoka-700 tracking-tight">
             About Kidz Kapers
           </h1>
@@ -94,59 +93,55 @@ const About = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="pt-0 pb-16 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">
-              Creating Magical Memories Since Day One
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              At Kidz Kapers, we don't just plan birthday surprises — we create unforgettable memories that children will cherish for years.
-            </p>
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 text-left my-8 rounded-r-lg">
-              <p className="text-xl italic text-gray-700">
-                "Every child deserves a magical birthday — not just balloons, but real wonder."
-              </p>
-            </div>
-            <p className="text-lg text-gray-600">
-              Founded in Nagpur, we are on a mission to make kids across India wake up to smiles, superheroes, cake, and joy. Whether it's a surprise visit from their favorite cartoon character, fun games designed just for them, or gifts that light up their eyes — we make sure your child feels like the hero of their story.
+      <section className="py-2 md:py-6 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            Creating Magical Memories Since Day One
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-8">
+            At Kidz Kapers, we don't just plan birthday surprises — we create unforgettable memories that children will cherish for years.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 md:p-6 text-left my-6 md:my-8 rounded-r-lg">
+            <p className="text-lg md:text-xl italic text-gray-700">
+              "Every child deserves a magical birthday — not just balloons, but real wonder."
             </p>
           </div>
+          <p className="text-base md:text-lg text-gray-600">
+            Founded in Nagpur, we are on a mission to make kids across India wake up to smiles, superheroes, cake, and joy. Whether it's a surprise visit from their favorite cartoon character, fun games designed just for them, or gifts that light up their eyes — we make sure your child feels like the hero of their story.
+          </p>
         </div>
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-6">
-              <span className="text-4xl">🚀</span>
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
-            <p className="text-xl text-gray-600">
-              To become India's most loved surprise brand for kids, starting from Nagpur and growing one smile at a time — by combining <span className="font-semibold text-purple-600">creativity, emotion, and celebration</span> into every moment we create.
-            </p>
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block mb-4 md:mb-6">
+            <span className="text-4xl">🚀</span>
           </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+          <p className="text-lg md:text-xl text-gray-600">
+            To become India's most loved surprise brand for kids, starting from Nagpur and growing one smile at a time — by combining <span className="font-semibold text-purple-600">creativity, emotion, and celebration</span> into every moment we create.
+          </p>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               The passionate creators who make the magic happen at every Kidz Kapers event.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -156,7 +151,7 @@ const About = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-60 md:h-64 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -164,12 +159,12 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                    <p className="text-yellow-300 font-medium">{member.role}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">{member.name}</h3>
+                    <p className="text-yellow-300 font-medium text-sm md:text-base">{member.role}</p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-600">{member.description}</p>
+                <div className="p-4 md:p-6">
+                  <p className="text-sm md:text-base text-gray-600">{member.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -178,18 +173,18 @@ const About = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="py-16 bg-gray-200">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="text-center"
           >
-            <h2 className="text-3xl font-bold mb-8">Why Parents Trust Us</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Why Parents Trust Us</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
               {[
                 "✅ Surprise character entry",
                 "✅ Games created for your space & theme",
@@ -204,7 +199,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="bg-white backdrop-blur-sm p-4 rounded-lg text-lg font-medium"
+                  className="bg-white backdrop-blur-sm p-3 md:p-4 rounded-lg text-base md:text-lg font-medium"
                 >
                   {item}
                 </motion.div>
@@ -216,15 +211,15 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-8"
+              className="mt-6 md:mt-8"
             >
-              <h3 className="text-2xl font-bold mb-4">📍 Starting from Nagpur. Dreaming of India.</h3>
-              <p className="text-xl mb-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">📍 Starting from Nagpur. Dreaming of India.</h3>
+              <p className="text-lg md:text-xl mb-6 md:mb-8">
                 Kidz Kapers is proudly built in Nagpur, but our dream is much bigger — to create India's largest and most loved kids' celebration brand.
               </p>
               <button
                 onClick={() => navigate("/contact")}
-                className="bg-white text-purple-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-purple-100 transition-all shadow-lg hover:shadow-xl"
+                className="bg-white text-purple-600 px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-base md:text-lg hover:bg-purple-100 transition-all shadow-lg hover:shadow-xl"
               >
                 Let's Create Magic Together
               </button>
