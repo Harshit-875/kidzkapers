@@ -27,7 +27,7 @@ const PartyPackages = ({onPackageSelect}) => {
         '🎯 2/3 Exciting games with prizes',
         '🎥 Free video + photo shoot (mobile camera, reels, raw footage)',
         '🎂 500gm Fresh Cake',
-        '🎶 Themed music & sound effects',
+        '🎶 Themed music',
         '🎉 2 Party poppers for surprise',
         '🎁 Small surprise gifts & chocolates',
         '🎈 Colourful balloons'
@@ -58,7 +58,7 @@ const PartyPackages = ({onPackageSelect}) => {
         '🎯 2/3 Exciting games with prizes',
         '🎥 Free video + photo shoot (mobile camera, reels, raw footage)',
         '🎂 500gm Fresh Cake',
-        '🎶 Themed music & sound effects',
+        '🎶 Themed music',
         '🎉 2 Party poppers for surprise',
         '🎁 Small surprise gifts & chocolates',
         '🎈 Colourful balloons'
@@ -247,7 +247,7 @@ const PartyPackages = ({onPackageSelect}) => {
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-bold px-6 py-2 md:px-8 md:py-3 rounded-full transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
           >
-            🎨 Design full birthday surprise
+            🎊 Tailor the Perfect Moment
           </a>
         </div>
       </div>

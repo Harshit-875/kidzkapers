@@ -16,7 +16,7 @@ const HowItWorks = () => {
       description: "Pick between our morning wake-up surprise, evening party package, or both!",
       icon: "📅",
       color: "from-blue-100 to-blue-200",
-      details: ["🌞 Morning: 6am-12pm", "🌙 Evening: 4pm-9pm"],
+      details: ["🌞 Morning: 6am-12pm", "🌙 Evening: 4pm-10pm"],
       link: "#surprise-planner"
     },
     {
@@ -25,7 +25,8 @@ const HowItWorks = () => {
       description: "Select characters, cake, games, and gifts to create the perfect experience",
       icon: "✨",
       color: "from-yellow-100 to-yellow-200",
-      tags: ["🦸 Characters", "🎂 Cake", "🎁 Gifts"]
+      tags: ["🦸 Characters", "🎂 Cake", "🎁 Gifts"],
+      link: "#surprise-planner" // Added link to step 2
     },
     {
       id: 3,
@@ -33,7 +34,8 @@ const HowItWorks = () => {
       description: "Our team arrives with all the fun - you just enjoy the priceless reactions!",
       icon: "🎁",
       color: "from-purple-100 to-pink-200",
-      extras: ["Professional setup", "Full coordination", "Memorable moments"]
+      extras: ["Professional setup", "Full coordination", "Memorable moments"],
+      link: "#surprise-planner" // Added link to step 3
     }
   ];
 
@@ -80,17 +82,15 @@ const HowItWorks = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true, margin: "-50px" }}
-              className={`flex flex-col items-center z-10 bg-white rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 ${step.link ? 'cursor-pointer' : ''}`}
+              className={`flex flex-col items-center z-10 bg-white rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer`}
               whileHover={{ y: -5 }}
-              {...(step.link && {
-                onClick: (e) => {
-                  const el = document.querySelector(step.link);
-                  if (el) {
-                    e.preventDefault();
-                    scrollWithOffset(el);
-                  }
+              onClick={(e) => {
+                const el = document.querySelector(step.link);
+                if (el) {
+                  e.preventDefault();
+                  scrollWithOffset(el);
                 }
-              })}
+              }}
             >
               {/* Step Indicator */}
               <div className={`relative mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-3xl sm:text-4xl shadow-md`}>
