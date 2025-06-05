@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 // Import team member images (replace with actual imports)
-import sanskar from "../assets/team/sanskar.png";
-import shrihari from "../assets/team/shrihari.png";
+import sanskar from "../assets/team/sanskar.jpg";
+import shrihari from "../assets/team/shrihari.jpg";
 import roshani from "../assets/team/roshani.jpg";
 import gourav from "../assets/team/gourav.jpg";
 import rohit from "../assets/team/rohit.jpg";
