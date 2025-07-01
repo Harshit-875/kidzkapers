@@ -282,7 +282,7 @@ const SurprisePlanner = ({ initialValues = {}, onClose }) => {
 🎂 *Date of Birth:* ${formData.dateOfBirth || 'Not specified'}
 ⏰ *Time Slot:* ${formData.timeSlot || 'Not selected'}
 🧒 *Kids Present:* ${formData.kidsCount}
-🎮 *Games:* ${formData.gamesCount} (Base: ₹${surpriseType === 'morning' ? '600' : '1000'} per game + ₹80 per kid per game)
+🎮 *Games:* ${formData.gamesCount} (Base: ₹${surpriseType === 'morning' ? '1600' : '2000'} per game + ₹100 per kid per game)
 🦸 *Characters:* ${selectedChars}
 🎂 *Cake Size:* ${formData.cakeSize || 'Not selected'} (${formData.cakeFlavor || 'No flavor selected'})
 🎁 *Gifts:* ${formData.giftsCount}
