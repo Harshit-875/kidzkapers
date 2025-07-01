@@ -81,18 +81,18 @@ const PartyPackages = ({onPackageSelect}) => {
   };
   
   
-  const handleBooking = (pkg) => {
-    // Pass the package details to the parent component
-    onPackageSelect({
-      ...pkg.defaultValues,
-      surpriseType: 'morning' // Default to evening surprise
-    });
+  // const handleBooking = (pkg) => {
+  //   // Pass the package details to the parent component
+  //   onPackageSelect({
+  //     ...pkg.defaultValues,
+  //     surpriseType: 'morning' // Default to evening surprise
+  //   });
     
-    // Scroll to the planner
-    setTimeout(() => {
-      document.getElementById('surprise-planner').scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
+  //   // Scroll to the planner
+  //   setTimeout(() => {
+  //     document.getElementById('surprise-planner').scrollIntoView({ behavior: 'smooth' });
+  //   }, 100);
+  // };
 
   const currentPackage = packages[activeGender];
 
