@@ -237,10 +237,10 @@ const SurprisePlanner = ({ initialValues = {}, onClose }) => {
     const shootCost = formData.shootOption === 'premium' ? 5000 : 0;
     
     // Base game cost (600 for morning, 1000 for evening)
-    const baseGameCost = surpriseType === 'morning' ? 600 : 1000;
+    const baseGameCost = surpriseType === 'morning' ? 1600 : 2000;
     
     // Additional charge per kid per game (80 per kid per game)
-    const perKidGameCharge = formData.kidsCount * formData.gamesCount * 80;
+    const perKidGameCharge = formData.kidsCount * formData.gamesCount * 100;
     
     // Total games cost
     const gamesCost = (baseGameCost * formData.gamesCount) + perKidGameCharge;
