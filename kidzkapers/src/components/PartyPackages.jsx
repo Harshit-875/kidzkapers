@@ -19,8 +19,8 @@ const PartyPackages = ({onPackageSelect}) => {
     girl: {
       title: 'Magical Princess Party',
       tagline: 'Where dreams come true!',
-      price: 'Starting @ ₹9,199',
-      originalPrice: '₹11,499',
+      price: 'Starting @ ₹14,999',
+      originalPrice: '₹21,499',
       features: [
         '👑 2 Characters (Mickey Mouse / Minnie Mouse)',
         '⏱️ 1 Hour of Fun with kids',
@@ -50,8 +50,8 @@ const PartyPackages = ({onPackageSelect}) => {
     boy: {
       title: 'Adventure Hero Party',
       tagline: 'For boys who dream big!',
-      price: 'Starting @ ₹7,199',
-      originalPrice: '₹9,499',
+      price: 'Starting @ ₹14,999',
+      originalPrice: '₹21,499',
       features: [
         '🦸 2 Superheroes (Batman / Spiderman / Iron Man)',
         '⏱️ 1 Hour of Action-packed fun',

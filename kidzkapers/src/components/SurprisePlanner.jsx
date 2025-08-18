@@ -288,7 +288,7 @@ const SurprisePlanner = ({ initialValues = {}, onClose }) => {
 🎁 *Gifts:* ${formData.giftsCount}
 🎊 *Free Extras:* ${freeExtras}
 📸 *Shoot Option:* ${shootOption}
-${isCouponApplied ? '🎟️ *Coupon Applied:* FIRSTSURPRISE (5% discount)\n' : ''}💰 *Total Estimated Cost:* ₹${calculateTotal().toLocaleString()}
+
 
 Please contact me to confirm this booking!`;
 
@@ -809,7 +809,7 @@ Please contact me to confirm this booking!`;
 
             {/* Total Cost */}
             <div className="bg-gradient-to-r from-green-400 to-blue-500 p-4 sm:p-6 rounded-lg text-white text-center shadow-lg mt-6">
-              <div className="mb-3 sm:mb-4">
+              {/* <div className="mb-3 sm:mb-4">
                 <h3 className="text-lg sm:text-xl font-bold">
                   Subtotal: ₹{calculateSubtotal().toLocaleString()}
                 </h3>
@@ -821,7 +821,7 @@ Please contact me to confirm this booking!`;
                 <h3 className="text-xl sm:text-2xl font-bold mt-2">
                   🎉 Total Estimated Cost: ₹{calculateTotal().toLocaleString()}
                 </h3>
-              </div>
+              </div> */}
               <button
                 onClick={() => handleSubmit(surpriseType === 'morning' ? 'Morning' : 'Evening')}
                 className="cursor-pointer mt-3 sm:mt-4 bg-white text-green-600 hover:bg-gray-100 font-bold px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-base sm:text-lg transition transform hover:scale-105 shadow-md w-full sm:w-auto"
