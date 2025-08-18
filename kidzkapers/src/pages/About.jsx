@@ -45,12 +45,12 @@ const About = () => {
       description: "Every game and superhero mask you see? That's Shrihari's magic. He designs custom games, builds creative experiences, and crafts unique superhero faces that bring Kidz Kapers to life.",
       image: shrihari
     },
-    {
-      name: "Roshani Kumbhalkar",
-      role: "Strategy & Campaign Manager",
-      description: "From accounts to Meta ad campaigns, Roshani keeps Kidz Kapers organized and visible online. Her dual role ensures we reach the right audience while staying financially sound.",
-      image: roshani
-    },
+    // {
+    //   name: "Roshani Kumbhalkar",
+    //   role: "Strategy & Campaign Manager",
+    //   description: "From accounts to Meta ad campaigns, Roshani keeps Kidz Kapers organized and visible online. Her dual role ensures we reach the right audience while staying financially sound.",
+    //   image: roshani
+    // },
     {
       name: "Gourav Dayma",
       role: "Research & Event Operations Lead",
